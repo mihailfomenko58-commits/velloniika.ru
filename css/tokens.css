@@ -1,0 +1,63 @@
+/* =========================================================
+   ТОКЕНЫ: шрифты, цвета, размеры. Меняйте цвета только здесь.
+   ========================================================= */
+
+/* --- Шрифты (локально, кириллица + латиница). Собираются скриптом scripts/build_fonts.py --- */
+@font-face {
+  font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400 500; font-display: swap;
+  src: url('../assets/fonts/cormorant-garamond.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400 500; font-display: swap;
+  src: url('../assets/fonts/cormorant-garamond-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Jost'; font-style: normal; font-weight: 300 500; font-display: swap;
+  src: url('../assets/fonts/jost.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../assets/fonts/jetbrains-mono.woff2') format('woff2');
+}
+
+:root {
+  /* Мир Вероники — тушь */
+  --ink: #0E0D0C;          /* фон главной */
+  --ink-2: #1B1A18;        /* карточки на чёрном */
+  /* Мир студии — ночной индиго (замер из сторис студии) */
+  --indigo: #253255;
+  --indigo-2: #313E66;
+  /* Текст и бумага */
+  --bone: #EDE6DA;         /* основной текст на тёмном (15.7:1 на --ink) */
+  --paper: #F1EADF;        /* светлые вставки */
+  --text-dark: #1A1714;    /* текст на бумаге (14.9:1) */
+  --muted: #8C877F;        /* вторичный текст на чёрном (5.4:1) */
+  --muted-indigo: #ABA8B6; /* вторичный текст на индиго (5.3:1) */
+  --muted-paper: #6B655D;  /* вторичный текст на бумаге (4.8:1) */
+  --line: rgba(237, 230, 218, 0.16);  /* линии 1px */
+  --accent: #D9894A;       /* янтарь: кнопки, ✦, свечение (7:1 на --ink) */
+  --accent-indigo: #E39A5E;/* янтарь для текста на индиго (5.4:1) */
+
+  /* Шрифты */
+  --f-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --f-text: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* Шкала: огромный — обычный — крошечный */
+  --fs-name: clamp(60px, 18vw, 280px);
+  --fs-h2: clamp(40px, 7vw, 120px);
+  --fs-menu: clamp(44px, 11vw, 96px);
+  --fs-body: clamp(16px, 0.35vw + 14.6px, 18px);
+  --fs-small: 14px;
+  --fs-mono: 12px;
+
+  /* Сетка и отступы */
+  --gutter: clamp(16px, 3.2vw, 48px);
+  --header-h: 64px;
+  --radius-pill: 999px;
+  --ease: cubic-bezier(.22, .8, .2, 1);
+}
+
+@media (min-width: 768px) {
+  :root { --header-h: 80px; }
+}

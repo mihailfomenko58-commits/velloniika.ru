@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /refs/
+Disallow: /photos/
+
+Sitemap: https://velloniika.ru/sitemap.xml
